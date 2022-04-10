@@ -1,3 +1,5 @@
+// 4 kata complete
+
 // 6kyu: The Supermarket Queue (2 solutions)
 function queueTime(customers, n) {
   let tills = Array(n).fill(0)
