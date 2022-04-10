@@ -38,3 +38,9 @@ function capitalizeWord(word) {
   word = word[0].toUpperCase() + word.substring(1);
   return word;
 }
+
+// 8kyu: Area of a Square
+function squareArea(A){
+  let r = A*4/2/Math.PI
+  return Number((r**2).toFixed(2))
+}
