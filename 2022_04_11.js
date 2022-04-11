@@ -51,3 +51,9 @@ function isToday(date) {
   console.log(new Date().toDateString(), date.toDateString())
   return date.toDateString() == new Date().toDateString()
 }
+
+//8kyu Training on Double Char
+function doubleChar(str) {
+  return str.split('').map(x=>x+x).join('')
+}
+
