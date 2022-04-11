@@ -1,4 +1,4 @@
-// 13 kata completed
+// 18 kata completed
 
 // 8kyu: Training on Stringy Strings
 function stringy(size) {
@@ -102,3 +102,38 @@ function testEven(n) {
     return (n % 2) == 0;
 }
 
+// 8kyu: Define a card suit
+function defineSuit(card) {
+  return card[card.length-1] == '♣'? 'clubs': card[card.length-1] == '♦'? 'diamonds': card[card.length-1] == '♥'? 'hearts': 'spades'
+}
+
+// 8kyu: Sum the Strings
+function sumStr(a,b) {
+  return (Number(a)+Number(b)).toString()
+}
+
+// 8kyu: Hex to Decimal
+function hexToDec(hexString){
+  return parseInt(hexString, 16)
+}
+
+// 8kyu: Heads and Legs
+function animals(heads, legs){
+  let cows = legs/2 - heads
+  let chickens = heads - cows
+  return cows<0||chickens<0||cows%1!=0||chickens%1!=0? 'No solutions': [chickens, cows]
+}
+
+// 7kyu: Find the vowels
+function vowelIndices(word){
+  let ans = []
+  for(let i = 0; i<word.length; i++){
+    word[i].toLowerCase() == 'a'|| 
+    word[i].toLowerCase() == 'e'||
+    word[i].toLowerCase() == 'i'||
+    word[i].toLowerCase() == 'o'||
+    word[i].toLowerCase() == 'u'||
+    word[i].toLowerCase() == 'y' ? ans.push(i+1): ans = ans
+  }
+  return ans
+}
