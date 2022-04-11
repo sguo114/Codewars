@@ -1,4 +1,4 @@
-// 5 kata completed
+// 13 kata completed
 
 // 8kyu: Training on Stringy Strings
 function stringy(size) {
@@ -52,8 +52,53 @@ function isToday(date) {
   return date.toDateString() == new Date().toDateString()
 }
 
-//8kyu Training on Double Char
+//8kyu Double Char
 function doubleChar(str) {
   return str.split('').map(x=>x+x).join('')
+}
+
+// 8kyu: Find Maximum and Minimum
+var min = function(list){
+    list.sort((a,b)=>a-b)
+    return list[0];
+}
+
+var max = function(list){
+    list.sort((a,b)=>b-a)
+    return list[0];
+}
+
+// 8kyu: Returning Strings
+function greet(name){
+  return `Hello, ${name} how are you doing today?`
+}
+
+// 8kyu: What is between?
+function between(a, b) {
+  let ans = []
+  for(let i = 0; i<=(b-a); i++){
+    ans.push(a+i)
+  }
+  return ans
+}
+
+// 8kyu: Reverse List Order
+function reverseList(list) {
+  return list.reverse()
+}
+
+// 8kyu: Training on Enumerable Magic #25- Take the first N Elements
+function take(arr, n) {
+  return arr.slice(0,n)
+}
+
+// 8kyu: Sum of Positive
+function positiveSum(arr) {
+  return arr.reduce((cumm,next)=>next>0?next+cumm:cumm,0)
+}
+
+// 8kyu: Is it even?
+function testEven(n) {
+    return (n % 2) == 0;
 }
 
