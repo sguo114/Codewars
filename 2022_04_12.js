@@ -78,3 +78,8 @@ function solve(n) {
   }
   return n == 0? count: -1
 }
+
+// 7kyu Thinkful- List Drills: Longest Word
+function longest(words) {
+  return Math.max(...words.map(word=> word.length)); 
+}
