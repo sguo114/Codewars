@@ -1,4 +1,4 @@
-// 5 kata completed
+// 6 kata completed
 
 // 8kyu: To square(root) or not to square(root)
 function squareOrSquareRoot(array) {
@@ -49,4 +49,22 @@ const xMarksTheSpot = (input) => {
   }
   console.log(x)
   return x.length!=1? []: [x[0],y[0]]
+}
+
+// 6kyu: Pi Approximation
+function iterPi(epsilon) {
+  let sign
+  let i = 1
+  let diff = 100
+  let piover4 = 0
+  let count = 1
+  
+  while(diff > epsilon){
+    count%2 != 0? sign =1: sign = -1
+    piover4 += sign/(i)
+    i += 2
+    count += 1
+    diff = Math.abs(Math.PI - piover4*4)
+  }
+  return [count-1, Number((piover4*4).toFixed(10))]
 }
