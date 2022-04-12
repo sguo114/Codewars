@@ -1,4 +1,4 @@
-// 6 kata completed
+// 7 kata completed
 
 // 8kyu: To square(root) or not to square(root)
 function squareOrSquareRoot(array) {
@@ -67,4 +67,14 @@ function iterPi(epsilon) {
     diff = Math.abs(Math.PI - piover4*4)
   }
   return [count-1, Number((piover4*4).toFixed(10))]
+}
+
+// 7kyu: ATM
+function solve(n) {
+  let count = 0
+  while(n>0){
+    n>=500? n = n-500: n>=200? n = n-200: n>=100? n = n-100: n>=50? n = n-50: n>=20? n= n-20: n>=10? n = n-10: n = -1
+    count+= 1
+  }
+  return n == 0? count: -1
 }
