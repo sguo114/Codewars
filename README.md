@@ -4,7 +4,7 @@ My collection of daily coding challenges from Codewars.
 
 8kyu: 69/390
 
-7kyu: 12/1900
+7kyu: 14/1900
 
 6kyu: 8/1980
 
