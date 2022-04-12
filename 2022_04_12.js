@@ -1,4 +1,4 @@
-// 7 kata completed
+// 8 kata completed
 
 // 8kyu: To square(root) or not to square(root)
 function squareOrSquareRoot(array) {
