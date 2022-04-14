@@ -16,3 +16,8 @@ function unusedDigits() {
 function unusedDigits(...arr) {
   return '0123456789'.replace(new RegExp(`[${arr.join('')}]`,'g'),'')
 }
+
+// 8kyu: Pirates!! Are the cannons ready??
+const cannonsReady = (gunners) => {
+  return Object.values(gunners).join('').includes('nay')?'Shiver me timbers!':'Fire!'
+}
