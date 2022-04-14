@@ -1,4 +1,4 @@
-// 8 kata completed
+// 10 kata completed
 
 // 7kyu: Filter unused digits (2 solutions)
 function unusedDigits() {
@@ -62,4 +62,28 @@ function sumMul(n,m){
     ans = ans + n*i
   }
   return ans ==0? 'INVALID':ans
+}
+
+// 8kyu: Reversed Words
+function reverseWords(str){
+  return str.split(' ').reverse().join(' '); 
+}
+
+// 8kyu: Is n divisible by x and y
+function isDivisible(n, x, y) {
+  return n%x == 0 && n%y == 0
+}
+
+// 8kyu: Well of Ideas (#11)
+function well(x){
+  let good = 0, bad = 0
+  x.forEach(idea=>idea=='good'?good++:bad++)
+  return good>2?'I smell a series!':good>0?'Publish!':'Fail!'
+}
+
+// 7kyu: Training on Dropcaps
+function dropCap(n) {
+  console.log(n)
+  let arr = n.split(' ').map(word=>word.length>2?word.toLowerCase():word).map(word=> word.length>2?word[0].toUpperCase()+word.substring(1):word)
+  return arr.join(' ')
 }
