@@ -1,4 +1,4 @@
-// 3 kata completed
+// 8 kata completed
 
 // 7kyu: Filter unused digits (2 solutions)
 function unusedDigits() {
@@ -26,4 +26,40 @@ const cannonsReady = (gunners) => {
 // 8kyu: A Strange Trip to the Market
 function isLockNessMonster(s) {
   return s.includes("tree fiddy") || s.includes("3.50");
+}
+
+// 8kyu:Convert a Number to a String!
+function numberToString(num) {
+  return String(num)
+}
+
+// 8kyu: altERnaTIngcAsE
+String.prototype.toAlternatingCase = function () {
+  return this.split('').map(x=> x==x.toLowerCase()? x=x.toUpperCase(): x=x.toLowerCase()).join('')
+}
+
+// 8kyu: String repeat (2 solutions)
+function repeatStr (n, s) {
+  let ans = ''
+  for(let i=0; i<n; i++){
+    ans+=s
+  }
+  return ans;
+}
+// solution 2
+function repeatStr(n,s){ return s.repeat(n)}
+
+// 8kyu: Find the Remainder
+function remainder(n, m){
+  return n>m? n%m: m%n
+}
+
+// 8kyu: Sum of Multiples
+function sumMul(n,m){
+  let count = Math.floor(m/n)
+  let ans = 0
+  for(let i = 1; i<=count; i++){
+    ans = ans + n*i
+  }
+  return ans ==0? 'INVALID':ans
 }
