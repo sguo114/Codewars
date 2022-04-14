@@ -1,4 +1,4 @@
-// 1 kata completed
+// 3 kata completed
 
 // 7kyu: Filter unused digits (2 solutions)
 function unusedDigits() {
@@ -20,4 +20,10 @@ function unusedDigits(...arr) {
 // 8kyu: Pirates!! Are the cannons ready??
 const cannonsReady = (gunners) => {
   return Object.values(gunners).join('').includes('nay')?'Shiver me timbers!':'Fire!'
+}
+
+
+// 8kyu: A Strange Trip to the Market
+function isLockNessMonster(s) {
+  return s.includes("tree fiddy") || s.includes("3.50");
 }
