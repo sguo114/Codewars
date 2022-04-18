@@ -1,4 +1,4 @@
-// 14 kata completed
+// 15 kata completed
 
 // 6kyu: Multiples of 3 or 5
 function solution(number){
@@ -89,6 +89,19 @@ function to_nato(words) {
     } else{array[i]}
   }
   return array.join(' ')
+}
+
+// 7kyu: Barista Problem
+function barista(coffees){
+  if(coffees == 0){
+    return 0
+  } else{
+    coffees.sort((a,b)=>a-b)
+    let wait = [coffees[0]]
+    for(let i = 1; i<coffees.length;i++){
+      wait.push(wait[i-1] + 2 + coffees[i])
+    }
+  return wait.reduce((a,b)=>a+b)}
 }
 
 // 7kyu: Complementary DNA
