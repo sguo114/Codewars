@@ -1,4 +1,4 @@
-// 13 kata completed
+// 14 kata completed
 
 // 6kyu: Multiples of 3 or 5
 function solution(number){
@@ -135,6 +135,13 @@ const reverseSeq = n => {
 // 8kyu: Convert number to reverse array of digits
 function digitize(n) {
   return String(n).split('').map(x=>Number(x)).reverse()
+}
+
+// 8kyu: Counting Sheep...
+function countSheeps(arrayOfSheep) {
+  let count = 0
+  arrayOfSheep.forEach(sheep=>sheep==true?count++:count = count)
+  return count
 }
 
 // 6kyu: JS is Weird: Return 'a'
