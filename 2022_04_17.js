@@ -1,3 +1,5 @@
+// 3 kata completed
+
 // 8kyu: Count of positive/ sum of negatives
 function countPositivesSumNegatives(input) {  
   let [count,sum] = [0,0]
