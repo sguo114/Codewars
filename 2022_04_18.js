@@ -1,4 +1,4 @@
-// 10 kata completed
+// 11 kata completed
 
 // 6kyu: Give me a Diamond
 function diamond(n){
@@ -113,3 +113,5 @@ function digitize(n) {
   return String(n).split('').map(x=>Number(x)).reverse()
 }
 
+// 6kyu: JS is Weird: Return 'a'
+x=(![]+[])[+!![]]
