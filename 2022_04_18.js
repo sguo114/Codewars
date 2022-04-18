@@ -1,4 +1,4 @@
-// 4 kata completed
+// 5 kata completed
 
 // 7kyu: You Got Change?
 function giveChange(amount) {
@@ -34,4 +34,9 @@ const reverseSeq = n => {
   }
   return ans;
 };
+
+// 8kyu: Convert number to reverse array of digits
+function digitize(n) {
+  return String(n).split('').map(x=>Number(x)).reverse()
+}
 
