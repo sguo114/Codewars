@@ -1,4 +1,13 @@
-// 11 kata completed
+// 12 kata completed
+
+// 6kyu: Multiples of 3 or 5
+function solution(number){
+  let array = []
+  for(let i = 1; i< number;i++){
+    i%5 == 0? array.push(i): i%3 == 0? array.push(i): array = array
+  }
+  return array.reduce((a,b)=>a+b,0)
+}
 
 // 6kyu: Give me a Diamond
 function diamond(n){
