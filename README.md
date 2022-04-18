@@ -2,7 +2,7 @@
 
 My collection of daily coding challenges from Codewars.
 
-8kyu: 89/390
+8kyu: 90/390
 
 7kyu: 20/1900
 
