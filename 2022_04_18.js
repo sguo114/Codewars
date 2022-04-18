@@ -1,4 +1,4 @@
-// 12 kata completed
+// 13 kata completed
 
 // 6kyu: Multiples of 3 or 5
 function solution(number){
@@ -31,6 +31,21 @@ function isOddHeavy(n){
     n[i]%2 == 0? even.push(n[i]): odd.push(n[i])
   }
   return odd.length>0 ? Math.min(...odd)>Math.max(...even): false
+}
+
+// 6kyu: Change it up
+function changer(str) { 
+  let code = 'abcdefghijklmnopqrstuvwxyza'
+  str = str.toLowerCase().split('')
+  
+  for(let i = 0; i<str.length; i++){
+    if(code.includes(str[i])){
+      let idx = code.indexOf(str[i]) + 1
+      str[i] = code[idx];
+    }
+    (/[aeiou]/g).test(str[i])?str[i] = str[i].toUpperCase():str[i] = str[i].toLowerCase()
+  }
+  return str.join('')
 }
 
 // 6kyu: Array.diff
