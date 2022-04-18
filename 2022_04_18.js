@@ -1,4 +1,33 @@
-// 6 kata completed
+// 10 kata completed
+
+// 6kyu: Give me a Diamond
+function diamond(n){
+  if(n%2 == 0 || n < 0){return null}
+  
+  let diam = '*'.repeat(n) + '\n', space = 1
+  
+  if(n>2){
+    for(let i = n-2; i>0; i-=2){
+      diam = ' '.repeat(space)+'*'.repeat(i) + '\n' + diam  + ' '.repeat(space)+ '*'.repeat(i) + '\n'
+      space += 1
+    }
+  }
+  return diam;
+}
+
+// 6kyu: Odd-heavy Array
+function isOddHeavy(n){
+  let odd = [], even = []
+  for(let i = 0; i<n.length; i++){
+    n[i]%2 == 0? even.push(n[i]): odd.push(n[i])
+  }
+  return odd.length>0 ? Math.min(...odd)>Math.max(...even): false
+}
+
+// 6kyu: Array.diff
+function arrayDiff(a, b) {
+  return a.filter(num=> !b.includes(num))
+}
 
 // 6kyu: If you can read this...
 function to_nato(words) {
@@ -36,6 +65,12 @@ function to_nato(words) {
     } else{array[i]}
   }
   return array.join(' ')
+}
+
+// 7kyu: Complementary DNA
+function DNAStrand(dna){
+  let complements = {'A':'T', 'T':'A', 'G':'C', 'C':'G'}
+  return dna.split('').map(ntide => complements[ntide]).join('')
 }
 
 // 7kyu: You Got Change?
