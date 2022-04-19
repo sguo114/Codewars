@@ -2,11 +2,11 @@
 
 My collection of daily coding challenges from Codewars.
 
-8kyu: 90/390
+8kyu: 93/390
 
-7kyu: 21/1900
+7kyu: 24/1900
 
-6kyu: 15/1980
+6kyu: 19/1980
 
 5kyu: 2/815
 
