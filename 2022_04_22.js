@@ -1,4 +1,4 @@
-// 13 kata completed
+// 22 kata completed
 
 // 5kyu: Directions Reduction
 function dirReduc(arr){
@@ -35,6 +35,17 @@ function sortArray(array) {
   return array
 }
 
+// 6kyu: Unique in Order
+var uniqueInOrder=function(iterable){
+  let order = [iterable[0]]
+  for(let i = 0; i<iterable.length-1; i++){
+    if(iterable[i] != iterable[i+1]){
+      order.push(iterable[i+1])
+    }
+  }
+  return iterable.length>0?order:[]
+}
+
 // 6 kyu: Find the odd int
 function findOdd(A) {
   let freq = {}
@@ -47,6 +58,15 @@ function findOdd(A) {
   }
   let odd = Object.values(freq).filter(n=>n%2==1)[0]
   return Number(Object.keys(freq).find(key=>freq[key]===odd))
+}
+
+// 6kyu: Number in Expanded Form
+function expandedForm(num) {
+  let digits = String(num).split('')
+  for(let i = 0; i<digits.length;i++){
+    digits[i] = digits[i]*Math.pow(10,digits.length-1-i)
+  }
+  return digits.filter(n=>n!=0).join(' + ')
 }
 
 // 6 kyu: Highest Scoring Word
@@ -118,9 +138,45 @@ function reverseWords(str) {
   return str.split(' ').map(w=>w.split('').reverse().join('')).join(' ')
 }
 
+// 7kyu: DNA to RNA Conversion
+function DNAtoRNA(dna) {
+  let match = {T:'U'}
+  return dna.split('').map(l=>match[l]?match[l]:l).join('')
+}
+
+// 7kyu: You're a Square
+var isSquare = function(n){
+  return Number.isInteger(Math.sqrt(n)); 
+}
+
+// 7kyu: Binary Addition
+function addBinary(a,b) {
+  return (a+b).toString(2)
+}
+
+// 8kyu: Bin to Decimal
+function binToDec(bin){
+  return parseInt(bin,2)
+}
+
+// 8kyu: Convert Boolean to "Yes" or "No"
+function boolToWord( bool ){
+  return bool?"Yes":"No"
+}
+
 // 8kyu: Convert a Boolean to a String
 function booleanToString(b){
   return b == true? 'true': 'false'
+}
+
+// 8kyu: Basic Mathematical Operations
+function basicOp(operation, value1, value2){
+  return operation == '+'? value1+value2: operation == '-'? value1-value2: operation =='*'? value1*value2: value1/value2
+}
+
+// 8kyu: Function 1: Hello World
+function greet(){
+  return "hello world!"
 }
 
 // 8kyu: MakeUpperCase
