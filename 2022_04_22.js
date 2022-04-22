@@ -1,4 +1,4 @@
-// 24 kata completed
+// 25 kata completed
 
 // 5kyu: Directions Reduction
 function dirReduc(arr){
@@ -103,6 +103,19 @@ function isValidWalk(walk) {
     }
   }
   return homeBase[0] == 0 && homeBase[1]==0 && walk.length == 10? true: false
+}
+
+// 6kyu: Find the unique number
+function findUniq(arr) {
+  let ans 
+  console.log(arr)
+  for(let i = 0; i<arr.length;i++){
+    if(arr[i] != arr[i+1]){
+      arr[i] == arr[i+2]? ans = arr[i+1]: i+1==arr.length-1? ans = arr[i+1]:ans = arr[i]
+      break;
+    }
+  }
+  return ans
 }
 
 // 7kyu: Beginner Series #3 Sum of Numbers
