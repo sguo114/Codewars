@@ -1,4 +1,4 @@
-// 26 kata completed
+// 27 kata completed
 
 // 5kyu: Directions Reduction
 function dirReduc(arr){
@@ -214,6 +214,11 @@ function addBinary(a,b) {
 // 8kyu: Bin to Decimal
 function binToDec(bin){
   return parseInt(bin,2)
+}
+
+// 8kyu: Fake Binary
+function fakeBin(x){
+  return x.replace(/[0-4]/g,0).replace(/[5-9]/g,1)
 }
 
 // 8kyu: Convert Boolean to "Yes" or "No"
