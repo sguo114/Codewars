@@ -1,4 +1,4 @@
-// 25 kata completed
+// 26 kata completed
 
 // 5kyu: Directions Reduction
 function dirReduc(arr){
@@ -19,6 +19,35 @@ function splice(arr){
       arr.splice(i,2):arr
   }
   return arr
+}
+
+// 5 kyu: Product of Consecutive Fib Numbers
+function productFib(prod){
+  let fibArr = [0,1],
+      ans1 = 0,
+      ans2 = 0,
+      ans = 0,
+      equals,
+      i = 0
+  while(ans<prod){
+    ans1 = fib(i)
+    ans2 = fib(i+1)
+    ans = ans1*ans2
+    i++
+  }
+  ans==prod?equals =true:equals=false
+  return [ans1,ans2,equals]
+}
+
+
+function fib(n){
+  let fibArr = [0,1]
+  if(n>1){
+    for(let i = 0; i<n; i++){
+      fibArr.push(fibArr[i]+fibArr[i+1])
+    }
+  }
+  return fibArr[n]
 }
 
 // 6kyu: Sort the Odd
