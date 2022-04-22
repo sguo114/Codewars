@@ -1,4 +1,4 @@
-// 22 kata completed
+// 24 kata completed
 
 // 5kyu: Directions Reduction
 function dirReduc(arr){
@@ -118,9 +118,24 @@ function getSum( a,b ){
   return ans
 }
 
+// 7kyu: Friend or Foe
+function friend(friends){
+  return friends.filter(name=>name.length==4)
+}
+
 // 7kyu: Square Every Digit
 function squareDigits(num){
   return Number(String(num).split('').map(n=>n*n).join(''));
+}
+
+// 7kyu: Growth of a Population
+function nbYear(p0, percent, aug, p) {
+  let years = 0
+  while(p>p0){
+    p0 = Math.floor(p0*(1+percent/100))+aug
+    years++
+  }
+  return years
 }
 
 // 7kyu: List Filtering
