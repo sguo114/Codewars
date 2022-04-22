@@ -8,7 +8,7 @@ My collection of daily coding challenges from Codewars.
 
 6kyu: 23/1980
 
-5kyu: 1/815
+5kyu: 4/815
 
 4kyu: 1/270
 
