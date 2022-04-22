@@ -6,7 +6,7 @@ My collection of daily coding challenges from Codewars.
 
 7kyu: 28/1900
 
-6kyu: 23/1980
+6kyu: 24/1980
 
 5kyu: 4/815
 
