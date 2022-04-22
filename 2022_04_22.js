@@ -1,4 +1,4 @@
-// 10 kata completed
+// 13 kata completed
 
 // 5kyu: Directions Reduction
 function dirReduc(arr){
@@ -19,6 +19,20 @@ function splice(arr){
       arr.splice(i,2):arr
   }
   return arr
+}
+
+// 6kyu: Sort the Odd
+function sortArray(array) {
+  let odds = array.filter(x=> x%2 != 0 ).sort((a,b)=>a-b), 
+      j = 0
+  
+  for(let i = 0; i<array.length;i++){
+    if(array[i]%2 != 0){
+      array[i] = odds[j]
+      j++
+    } 
+  }
+  return array
 }
 
 // 6 kyu: Find the odd int
@@ -89,6 +103,11 @@ function squareDigits(num){
   return Number(String(num).split('').map(n=>n*n).join(''));
 }
 
+// 7kyu: List Filtering
+function filter_list(l) {
+  return l.filter(x=>typeof x == "number")
+}
+
 // 7kyu: Get the Middle Character
 function getMiddle(s){
   return s.length%2==0? s[s.length/2-1]+s[s.length/2]:s[Math.floor(s.length/2)]
@@ -102,6 +121,11 @@ function reverseWords(str) {
 // 8kyu: Convert a Boolean to a String
 function booleanToString(b){
   return b == true? 'true': 'false'
+}
+
+// 8kyu: MakeUpperCase
+function makeUpperCase(str) {
+  return str.toUpperCase()
 }
 
 // 8kyu: Reversed Strings
