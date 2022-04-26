@@ -1,4 +1,33 @@
-// 12 kata completed
+// 13 kata completed
+
+// 6kyu: Delete Occurrences of an elementif it occurs more than n times
+function deleteNth(arr,n){
+  let freq = {}
+  for(let i = 0;i<arr.length;i++){
+    if(freq[arr[i]]){
+      freq[arr[i]] += 1
+    } else{
+      freq[arr[i]] = 1
+    }
+  }
+  for(let i = 0; i<arr.length;i++){
+    if(freq[arr[i]]>n){
+      arr.splice(arr.lastIndexOf(arr[i]),1)
+      freq[arr[i]] -=1
+      i--
+    }
+  }
+  return arr
+}
+
+// second solution
+function deleteNth(arr,n){
+  let freq = {}
+  return arr.filter(function(num){
+    (freq[num] = freq[num]+1||1);
+    return freq[num]<=n
+  })
+}
 
 // 6kyu: Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
 function sumDigPow(a, b) {
