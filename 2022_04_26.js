@@ -1,4 +1,4 @@
-// 7 kata completed
+// 12 kata completed
 
 // 6kyu: Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
 function sumDigPow(a, b) {
@@ -12,6 +12,18 @@ function sumDigPow(a, b) {
     sum = 0
   }
   return ans
+}
+
+// 6kyu: Break camelCase
+function solution(string) {
+  let arr = string.split('')
+  for(let i = 1;i<arr.length; i++){
+    if(arr[i] == arr[i].toUpperCase()){
+      arr.splice(i,0,' ')
+      i++
+    }
+  }
+  return arr.join('')
 }
 
 // 6kyu: Playing with digits
@@ -31,6 +43,13 @@ function nbDig(n, d) {
     squares.push(Math.pow(i,2))
   }
   return squares.join('').split('').filter(x=>x==d).length
+}
+
+// 7kyu: Number of People in the bus
+var number = function(busStops){
+  let people = 0
+  busStops.forEach(stop=>people += stop[0]-stop[1])
+  return people
 }
 
 // 8kyu: Grasshopper- Personalized Message
@@ -61,6 +80,44 @@ function sumArray(array) {
 // 8kyu: Return Negative
 function makeNegative(num) {
   return num>0? -num:num
+}
+
+// 8kyu: Grasshopper- Summation
+var summation = function (num) {
+  let ans = []
+  for(let i = 0; i< num;i++){
+    ans.push(num-i)
+  }
+  return ans.reduce((a,b)=>a+b)
+}
+
+// 8kyu: Reduce but grow
+function grow(x){
+  return x.reduce((a,b)=>a*b)
+}
+
+// 8kyu: Welcome!
+function greet(language) {
+	let welcome = {
+    english: 'Welcome',
+    czech: 'Vitejte',
+    danish: 'Velkomst',
+    dutch: 'Welkom',
+    estonian: 'Tere tulemast',
+    finnish: 'Tervetuloa',
+    flemish: 'Welgekomen',
+    french: 'Bienvenue',
+    german: 'Willkommen',
+    irish: 'Failte',
+    italian: 'Benvenuto',
+    latvian: 'Gaidits',
+    lithuanian: 'Laukiamas',
+    polish: 'Witamy',
+    spanish: 'Bienvenido',
+    swedish: 'Valkommen',
+    welsh: 'Croeso'   
+  }
+  return welcome[language]? welcome[language]: welcome['english']
 }
 
 // 8kyu: Switch it Up
