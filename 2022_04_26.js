@@ -1,4 +1,14 @@
-// 13 kata completed
+// 16 kata completed
+
+// 6kyu: Two to One
+function longest(s1, s2) {
+  let s = (s1+s2).split('').sort()
+  let freq={}
+  return s.filter(num=>{
+    freq[num]=freq[num]+1||1;
+    return freq[num] <= 1
+  }).join('')
+}
 
 // 6kyu: Delete Occurrences of an elementif it occurs more than n times
 function deleteNth(arr,n){
@@ -65,6 +75,16 @@ function digPow(n, p){
   return sum%n == 0? sum/n: -1
 }
 
+// 7kyu: Money, Money, Money
+function calculateYears(p, interest, tax, desired) {
+  let year=0
+  while(p<desired){
+    p = p+p*interest*(1-tax)
+    year+=1
+  }
+  return year
+}
+
 // 7kyu: Count the digit
 function nbDig(n, d) {
   let squares = []
@@ -104,6 +124,11 @@ function sumArray(array) {
     array.pop()
     return array.reduce((a,b)=>a+b,0)
   }
+}
+
+// 8kyu: L1: Set Alarm
+function setAlarm(employed, vacation){
+  return vacation == true? false:employed == true? true: false
 }
 
 // 8kyu: Return Negative
