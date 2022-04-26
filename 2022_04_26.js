@@ -1,4 +1,14 @@
-// 16 kata completed
+// 17 kata completed
+
+// 5kyu: Rot13
+function rot13(message){
+  let abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHJIKLM'.split('')
+  let cipher = ''
+  for(let i = 0; i<message.length; i++){
+    abc.indexOf(message[i])>=0?cipher+=abc[abc.indexOf(message[i])+13]:cipher+=message[i]
+  }
+  return cipher
+}
 
 // 6kyu: Two to One
 function longest(s1, s2) {
