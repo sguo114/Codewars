@@ -1,4 +1,17 @@
-// 4 kata completed
+// 9 kata completed
+
+// 5kyu: A Man and his Umbrellas
+function minUmbrellas(weather) {
+  let rain = ['rainy', 'thunderstorms']
+  let [home,work] = [0,0]
+  for(let i = 0; i<weather.length; i++){
+    rain.includes(weather[i])? 
+      ((i%2 ==0 && home==0) ? work += 1 : 
+      (i%2 ==0 && home>0) ? (work+=1,home-=1):
+      (i%2 !=0 && work==0) ? home+=1: (home+=1, work-=1)): home
+  }
+  return home+work
+}
 
 // 5kyu: String Incrementer
 function incrementString (strng) {
