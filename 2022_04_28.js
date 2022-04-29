@@ -1,4 +1,4 @@
-// kata completed
+// 3 kata completed
 
 // 6kyu: Bouncing Balls
 function bouncingBall(h,  bounce,  window) {
