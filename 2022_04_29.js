@@ -1,4 +1,4 @@
-// 6 kata completed
+// 7 kata completed
 
 // 5kyu: Integers: Recreation One
 function listSquared(m, n) {
@@ -15,6 +15,40 @@ function listSquared(m, n) {
   let arrOfSquares = sumOfSquares.filter(el=>Math.sqrt(el[1])%1==0)
   
   return arrOfSquares
+}
+
+// 5kyu: Second Variation on Caesar Cipher
+let abcs = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+
+function encodeStr(s, shift) {
+  let sArr = s.split(''), 
+      encode = [s[0].toLowerCase(), abcs[abcs.indexOf(s[0])+shift].toLowerCase()]
+  
+  for(let i = 0; i<sArr.length;i++){
+    let abcIndex = abcs.indexOf(sArr[i])
+    encode.push((abcIndex >= 0) ? abcs[abcIndex + shift] : sArr[i])
+  }
+  
+  let runArrLen = Math.ceil(encode.length/5),
+      runners = encode.length%4 ==0 && encode.length<17? 4: 5, ans = []
+  
+  for(let i = 0; i< runners;i++){
+    ans.push(encode.splice(0,runArrLen).join(''))
+  }
+  return ans
+}
+
+function decode(arr) {
+  let encoded = arr.join(''),
+      shift = abcs.indexOf(encoded[1])-abcs.indexOf(encoded[0])>0?
+              abcs.indexOf(encoded[1])-abcs.indexOf(encoded[0]):
+              26+abcs.indexOf(encoded[1])-abcs.indexOf(encoded[0]), 
+      decode = ''
+  for(let i = 2; i<encoded.length; i++){
+    let abcIndex = abcs.lastIndexOf(encoded[i])
+    decode += (abcIndex>=0) ? abcs[abcIndex - shift]: encoded[i]
+  }
+  return decode
 }
 
 // 6kyu: Tortoise racing
