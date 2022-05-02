@@ -1,4 +1,12 @@
-// kata completed
+// 6 kata completed
+
+// 5kyu: ROT13
+function rot13(str) {
+  let abcs = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM',
+      ans = []
+  str.split('').forEach(el => abcs.includes(el) ? ans.push(abcs[abcs.indexOf(el)+13]) : ans.push(el))
+  return ans.join('')
+}
 
 // 6kyu: Smallest Permutation
 function minPermutation(n) {
@@ -38,6 +46,11 @@ function checkExam(array1, array2) {
     array1[i] == array2[i] ? score += 4 : array2[i] == ''? score : score -= 1
   }
   return score < 0 ? 0 : score
+}
+
+// 8kyu: Function 2- squaring an argument
+function square(n){
+  return Math.pow(n,2)
 }
 
 // 8kyu: Invert Values
