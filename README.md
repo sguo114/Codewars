@@ -10,9 +10,9 @@ My collection of daily coding challenges from Codewars.
 
 5kyu: 12/815
 
-4kyu: 1/270
+4kyu: 4/270
 
-3kyu: 0/71
+3kyu: 1/71
 
 2kyu: 1/40
 
