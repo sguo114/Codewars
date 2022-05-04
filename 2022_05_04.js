@@ -34,3 +34,24 @@ weirdReverse=a=>a.sort(_=>1)
 function multiply(a, b){
   return String(BigInt(a) * BigInt(b))
 }
+
+// 6kyu: Simple Fun #217: Sort By Guide
+function sortByGuide(arr, guide) {
+  let toSort = [], ans = []  
+  
+  guide.forEach((el,i)=> el != -1 ? toSort.push([guide[i],arr[i]]) : toSort)
+  toSort.sort((a,b)=>a[0]-b[0])
+  
+  let j = 0
+  
+  for(let i = 0; i<guide.length; i++){
+    if(guide[i] == -1){
+      ans.push(arr[i])
+    } else{
+      ans.push(toSort[j][1])
+      j++
+    }
+  }
+  
+  return ans
+}
