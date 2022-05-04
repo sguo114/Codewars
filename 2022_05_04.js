@@ -1,4 +1,4 @@
-// 4 kata completed
+// 5 kata completed
 
 // 3kyu: The soul of wit: reverse an array
 reverse=a=>a.map(a.pop,[...a])
