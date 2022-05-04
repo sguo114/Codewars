@@ -1,4 +1,4 @@
-// 5 kata completed
+// 6 kata completed
 
 // 3kyu: The soul of wit: reverse an array
 reverse=a=>a.map(a.pop,[...a])
@@ -54,4 +54,33 @@ function sortByGuide(arr, guide) {
   }
   
   return ans
+}
+
+// 6kyu: Dbftbs Djqifs
+function encryptor (key, message) {
+  let abcs = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ',
+      ans = []
+  
+  if(key>26){
+    while(key>26){
+      key-=26
+    } 
+  }else if(key<-26){
+    while(key<-26){
+      key+=52
+    }
+    while(key<0){
+      key+=26
+    }
+  } else if(key<0){
+    key+=26 
+  }
+  
+  for(let i = 0; i<message.length; i++){
+    abcs.includes(message[i]) ? 
+      ans.push( abcs[ abcs.indexOf(message[i]) + key] ) :
+      ans.push(message[i])
+  }
+  
+	return ans.join('');
 }
