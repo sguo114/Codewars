@@ -1,4 +1,4 @@
-// 2 kata completed
+// 3 kata completed
 
 // 6kyu: Which are in?
 function inArray(array1,array2){
@@ -12,6 +12,11 @@ function inArray(array1,array2){
     }
   }
   return ans.sort()
+}
+
+// 7kyu: Descending Order
+function descendingOrder(n){
+  return Number(String(n).split('').sort((a,b)=>b-a).join(''))
 }
 
 // 7kyu: The Coupon Code
