@@ -4,9 +4,9 @@ My collection of daily coding challenges from Codewars.
 
 8kyu: 124/390
 
-7kyu: 47/1900
+7kyu: 49/1900
 
-6kyu: 45/1980
+6kyu: 49/1980
 
 5kyu: 12/815
 
