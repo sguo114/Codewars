@@ -1,4 +1,4 @@
-// 3 kata completed
+// 4 kata completed
 
 // 4 kyu: Remove Zeros (no array or string methods allowed, no temporary arrays)
 function removeZeros(array) {
@@ -21,6 +21,19 @@ function removeZeros(array) {
   }
   
   return array;
+}
+
+// 6kyu: Build Tower
+function towerBuilder(nFloors) {
+  let stars = nFloors*2 - 1, space = 0, ans = []
+  
+  for(let i = 0; i<nFloors; i++){
+    ans.push(' '.repeat(space) + '*'.repeat(stars) + ' '.repeat(space))
+    stars -= 2
+    space += 1
+  }
+  
+  return ans.reverse()
 }
 
 // 6kyu: Where is my parent?
