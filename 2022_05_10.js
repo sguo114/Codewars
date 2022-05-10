@@ -1,4 +1,4 @@
-// 4 kata completed
+// 5 kata completed
 
 // 4 kyu: Remove Zeros (no array or string methods allowed, no temporary arrays)
 function removeZeros(array) {
@@ -62,4 +62,9 @@ function cycle(n) {
     }
     return count
   }
+}
+
+// 8kyu: Can we divide it?
+function isDivideBy(number, a, b) {
+  return number%a == 0 && number%b ==0
 }
