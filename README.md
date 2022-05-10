@@ -2,15 +2,15 @@
 
 My collection of daily coding challenges from Codewars.
 
-8kyu: 124/390
+8kyu: 125/390
 
 7kyu: 49/1900
 
-6kyu: 49/1980
+6kyu: 53/1980
 
 5kyu: 12/815
 
-4kyu: 4/270
+4kyu: 5/270
 
 3kyu: 1/71
 
