@@ -37,3 +37,15 @@ function mixFruit (arr) {
   let request = arr.map(el=>el.toLowerCase()).map(el=>fruit[el]?fruit[el]:9)
   return Math.round(request.reduce((a,b)=>a+b)/arr.length)
 }
+
+// 7kyu: Round up to the next multiple of 5
+function roundToNext5(n){
+  let ans 
+  for(let i = 0; i<5; i++){
+    if((n+i)%5==0){
+      ans = n+i
+      break
+    }
+  }
+  return ans
+}
