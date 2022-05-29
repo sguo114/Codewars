@@ -11,6 +11,21 @@ function fib_rabbits(n, b) {
   return adult
 }
 
+// 6kyu: Encrypt this!
+var encryptThis = function(text) {
+  let arr = text.split(' ').map(el=>el.split(''))
+  
+  for(let i = 0; i<arr.length; i++){
+    let temp = arr[i][1]
+    arr[i][1] = arr[i][arr[i].length-1]
+    arr[i][arr[i].length-1] = temp
+    
+    arr[i][0] = arr[i][0].charCodeAt()
+  }
+  
+  return arr.map(el=>el.join('')).join(' ')
+}
+
 // 8kyu: Grasshopper: Debug sayHello
 function sayHello(name) {
   return `Hello, ${name}`
