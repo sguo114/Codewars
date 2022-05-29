@@ -1,4 +1,4 @@
-// kata completed
+// 2 kata completed
 
 // 6kyu: Pair of Gloves
 function numberOfPairs(gloves){
