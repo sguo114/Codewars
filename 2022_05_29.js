@@ -11,6 +11,31 @@ function fib_rabbits(n, b) {
   return adult
 }
 
+// 8kyu: Grasshopper: Debug sayHello
+function sayHello(name) {
+  return `Hello, ${name}`
+}
+
+// 8kyu: Training JS #4: Basic Data Types-- Arrays
+function getLength(arr){
+  return arr.length
+}
+function getFirst(arr){
+  return arr[0]
+}
+function getLast(arr){
+  return arr[arr.length-1]
+}
+function pushElement(arr){
+  var el=1;
+  arr.push(el)
+  return arr
+}
+function popElement(arr){
+  arr.pop()
+  return arr
+}
+
 // 8kyu: Sum arrays
 function sum (numbers) {  
     return numbers.reduce((a,b)=>a+b, 0)
