@@ -1,4 +1,4 @@
-// kata completed
+// 6 kata completed
 
 // 6kyu: Fibonacci Rabbits
 function fib_rabbits(n, b) {
