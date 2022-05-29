@@ -11,6 +11,11 @@ function fib_rabbits(n, b) {
   return adult
 }
 
+// 8kyu: Sum arrays
+function sum (numbers) {  
+    return numbers.reduce((a,b)=>a+b, 0)
+};
+
 // 8kyu: How many lightsabers do you own?
 function howManyLightsabersDoYouOwn(name) {
   return name == "Zach" ? 18 : 0
