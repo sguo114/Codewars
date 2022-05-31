@@ -1,4 +1,17 @@
-// kata completed
+// 4 kata completed
+
+// 6kyu: Fun with lists: countIf
+function countIf(head, p) {
+  let list = head, count = 0
+  
+  while(list){
+    if(p(list.data)) count++
+    
+    list = list.next
+  }
+  
+  return count;
+}
 
 // 6kyu: The Deaf Rats of Hamelin
 var countDeafRats = function(town) {
