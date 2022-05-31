@@ -26,3 +26,8 @@ var countDeafRats = function(town) {
   }
   return count;
 }
+
+// 8kyu: Sum Mixed Array
+function sumMix(x){
+  return x.reduce((a,b)=>a+Number(b), 0)
+}
