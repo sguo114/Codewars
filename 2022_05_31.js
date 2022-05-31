@@ -31,3 +31,8 @@ var countDeafRats = function(town) {
 function sumMix(x){
   return x.reduce((a,b)=>a+Number(b), 0)
 }
+
+// 8kyu: Keep Hydrated
+function litres(time) {
+  return Math.floor(time*.5);
+}
