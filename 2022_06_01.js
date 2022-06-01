@@ -1,4 +1,4 @@
-// 4 kata completed
+// 5 kata completed
 
 // 6kyu: Reverse or Rotate
 function revrot(str, sz) {
@@ -14,6 +14,12 @@ function revrot(str, sz) {
     ans += sum%2 == 0 ? window.split('').reverse().join('') : (window.slice(1) + window.slice(0,1))
   }
   return ans
+}
+
+// 6kyu: Meeting
+function meeting(s) {
+  let names = s.split(';').map(el=> el.split(':'))
+  return names.map( el => `(${el[1].toUpperCase()}, ${el[0].toUpperCase()})`).sort().join('')
 }
 
 // 6kyu: Help the bookseller!
