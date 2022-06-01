@@ -1,4 +1,4 @@
-// kata completed
+// 2 kata completed
 
 // 6kyu: Help the bookseller!
 function stockList(listOfArt, listOfCat){
@@ -23,4 +23,9 @@ function stockList(listOfArt, listOfCat){
   }
   
   return ans
+}
+
+// 8kyu: Vowel Remover
+function shortcut (string) {
+  return string.split('').filter(el => /[^aeiou]/g.test(el)).join('');
 }
