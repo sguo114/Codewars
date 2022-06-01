@@ -25,6 +25,17 @@ function stockList(listOfArt, listOfCat){
   return ans
 }
 
+// 7kyu: Printer Errors
+function printerError(s) {
+  let count = 0
+  for(let i = 0; i<s.length; i++){
+        if(/[n-z]/g.test(s[i])){
+          count++
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  }
+  return `${count}/${s.length}`
+}
+
 // 8kyu: Vowel Remover
 function shortcut (string) {
   return string.split('').filter(el => /[^aeiou]/g.test(el)).join('');
