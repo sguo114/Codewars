@@ -1,4 +1,20 @@
-// 2 kata completed
+// 4 kata completed
+
+// 6kyu: Reverse or Rotate
+function revrot(str, sz) {
+  let ans = ""
+  if(sz == 0 || sz>str.length) return ans
+  
+  for(let i = 0; i<Math.floor(str.length/sz); i++){
+    let window = str.slice(i*sz,i*sz+sz), sum = 0
+    
+    for(let j = 0; j<window.length; j++){
+      sum += Math.pow(window[j],3)
+    }
+    ans += sum%2 == 0 ? window.split('').reverse().join('') : (window.slice(1) + window.slice(0,1))
+  }
+  return ans
+}
 
 // 6kyu: Help the bookseller!
 function stockList(listOfArt, listOfCat){
