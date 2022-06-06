@@ -1,4 +1,21 @@
-// kata completed
+// 3 kata completed
+
+// 6kyu: Mad Max: Recursion Road- Find maximum or array without loops or Math.max
+function max(array) {
+  if(array.length<1) return -Infinity
+  if(array.length===1) return array[0]
+  
+  const recurMax = max(array.slice(1))
+  const localMax = array[0] > recurMax ? array[0] : recurMax
+  
+  return localMax
+}
+
+// 7kyu: Find the next perfect square
+function findNextSquare(sq) {
+  let root = Math.sqrt(sq)
+  return Number.isInteger(root) ? Math.pow(root+1,2) : -1;
+}
 
 // 8kyu: Add Length
 function addLength(str) {
