@@ -2,13 +2,11 @@
 
 // 6kyu: Mad Max: Recursion Road- Find maximum or array without loops or Math.max
 function max(array) {
-  if(array.length<1) return -Infinity
-  if(array.length===1) return array[0]
+  if(array.length < 1) return -Infinity
+  if(array.length === 1) return array[0]
   
-  const recurMax = max(array.slice(1))
-  const localMax = array[0] > recurMax ? array[0] : recurMax
-  
-  return localMax
+  const localMax = max(array.slice(1))
+  return array[0] > localMax ? array[0] : localMax
 }
 
 // 7kyu: Find the next perfect square
