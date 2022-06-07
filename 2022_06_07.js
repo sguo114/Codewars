@@ -1,4 +1,4 @@
-// kata completed
+// 2 kata completed
 
 // 6kyu: Pascal's Triangle #2
 function pascal(depth) {
