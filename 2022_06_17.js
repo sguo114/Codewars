@@ -22,3 +22,10 @@ function filter(head, p) {
     return filter(head.next, p)
   }  
 }
+
+// 6kyu: Fun with lists: countIf
+function countIf(head, p) {
+  if(head === null) return 0
+  let x = p(head.data) ? 1 : 0 
+  return x + countIf(head.next, p);
+}
