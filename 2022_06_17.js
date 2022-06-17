@@ -29,3 +29,11 @@ function countIf(head, p) {
   let x = p(head.data) ? 1 : 0 
   return x + countIf(head.next, p);
 }
+
+// 6kyu: Fun with lists:map
+function map(head, f) {
+  if(head){
+    return new Node(f(head.data), map(head.next, f))
+  }
+  return null
+}
